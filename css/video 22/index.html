@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="meta data about the page which browser shows when the client search the web">
+        <title>Css Sizing units</title>
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            html{
+                font-size: 20px;
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .box1{
+                background-color: aquamarine;
+                border: 3px solid red;
+                text-align: center;
+                /* width: 1523px; */
+                width: 100vw;
+                box-sizing: border-box;
+            }
+            .box2{
+                background-color: rgb(4, 7, 203);
+                border: 3px solid red;
+                color: white;
+                text-align: center;
+                /* width: 1523px; */
+                width: 80vw;
+                box-sizing: border-box;
+                margin: 5px auto;
+            }
+            #bx1{
+                /* min height means kam se kam itni height rkho par jyda content hone pe content ke hisab se bdha do*/
+                /* height: 40vh; */
+                min-height: 40vh;
+                font-size: 18px;
+            }
+            #bx1 p{
+                /* em ka mtlb parent ka itne guna */
+                font-size: 2em;
+                box-sizing: border-box;
+            }
+            #bx2{
+                height: 10vh;
+            }
+            .container{
+                font-size: 10px;
+                border: 2px solid red;
+                box-sizing: border-box;
+            }
+            .container p{
+                /* rem mtlb root parent ka itne guna */
+                font-size: 2rem;
+                width: 50%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="box1">This is a box</div>
+        <div class="box2">This is a nav</div>
+        <div id="bx1" class="box1">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                totam cum, eveniet mollitia consequatur odit. Odit totam itaque
+                iste, ut blanditiis laboriosam? Consequatur nemo dolor aperiam
+                temporibus, minima ducimus deserunt ratione nulla dolorum
+                voluptate, dignissimos rerum dolore pariatur. Eveniet et rerum
+                soluta veniam obcaecati itaque!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde at
+                temporibus id rem, atque ducimus illum ipsam saepe consequuntur
+                ipsum eos dolores impedit accusantium, quos illo quae cum
+                consectetur placeat esse. Quaerat velit accusantium, a accusamus
+                beatae voluptatibus quae recusandae incidunt laborum ipsam
+                dolore hic exercitationem deserunt, aspernatur magnam maiores
+                necessitatibus corrupti. Temporibus voluptas libero dolor
+                officiis, perspiciatis aut deleniti veniam? Esse exercitationem
+                expedita qui laudantium ad hic, itaque aspernatur officia eos
+                recusandae dolor quia, beatae nemo repellat temporibus ipsum
+                doloribus magnam laboriosam repudiandae eum officiis minima
+                tempora neque. Esse pariatur iure fugiat, deserunt tempora
+                incidunt quaerat nemo facilis illum amet. Necessitatibus eum
+                error modi voluptas voluptates delectus obcaecati assumenda.
+                Neque quae at illo maiores atque ea eaque doloremque perferendis
+                dolores molestiae, repellat sunt unde dolorem quisquam porro
+                ullam libero beatae? Repudiandae reprehenderit ipsum placeat eos
+                error vitae voluptas, accusamus officia incidunt aliquid dolor.
+                Corrupti explicabo soluta adipisci praesentium ipsa omnis minus
+                asperiores cum maxime, perferendis quasi! Necessitatibus vitae
+                deleniti omnis voluptatem temporibus id animi saepe debitis sint
+                dolores? Pariatur aspernatur error dolorum repellendus nemo
+                consectetur nihil cum numquam perspiciatis labore soluta
+                possimus illum facilis eum doloremque eius molestias velit
+                doloribus dignissimos sint quidem, aliquam quod? Nulla facere
+                repellendus cum!
+            </p>
+        </div>
+        <div id="bx2" class="box2">This is a nav</div>
+        <div class="container">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui
+                earum incidunt quis cupiditate optio ipsa, accusamus veniam
+                quibusdam neque sapiente exercitationem quam! Expedita assumenda
+                explicabo aut sunt voluptatum nam at nihil consequatur doloribus
+                reiciendis dolore nisi, voluptatibus veritatis dignissimos
+                laborum quia fugiat temporibus culpa, non animi labore hic eius?
+                Voluptas eius tenetur consequatur! Deserunt!
+            </p>
+        </div>
+    </body>
+</html>

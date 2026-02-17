@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="meta data about the page which browser shows when the client search the web">
+        <title>Css Selectors</title>
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            /* class selector */
+            .red{
+                background-color: red;
+            }
+            /* id selector */
+            #green{
+                background-color: green;
+            }
+            /* child selector */
+            div > p{
+                background-color: yellow;
+            }
+            /* Descendent Selector */
+            div a{
+                background-color: aquamarine;
+            }
+            /* universal selectors */
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            /* Pseudo Selctors */
+            a:visited{
+                color: red;
+            }
+
+            a:active{
+                background-color: rgb(255, 0, 0);
+            }
+            a:link{
+                color: rgb(8, 0, 233);
+            }
+            a:hover{
+                background-color: aqua;
+            }
+
+            p:first-child{
+                background-color: chocolate;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="red">This is red class</div>
+        <div id="green">This is green id</div>
+        <div>
+            <p>
+                hey this is p
+            </p>
+        </div>
+        <div>
+            <article>
+                <a>hey article ka para</a>
+            </article>
+        </div>
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://google2.com">Google</a>
+        <div>
+            <p>
+                First child
+            </p>
+            <p>
+                Second Child
+            </p>
+        </div>
+    </body>
+</html>

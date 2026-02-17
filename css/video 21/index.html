@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="meta data about the page which browser shows when the client search the web">
+        <title>CSS Specificity</title>
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            h1{
+                color: blue;
+            }
+            .yellow{
+                color: yellow;
+            }
+            .cred{
+                color: aqua;
+            }
+            .cpurple{
+                color: purple;
+            }
+            [data-x=a]{
+                background-color: red;
+            }
+            h2{
+                color: red !important;
+                background-color: aqua !important;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div>
+            <!-- 
+                CSS Specificity
+
+            inline css> id selector> class or atribute selector> Element Selector> Universal selector 
+            -->
+            <h1 class="yellow cred cpurple" data-x="a">
+                CSS Specificity
+            </h1>
+            <h2 style="color: white; background-color: green">Hey this is h2
+                heading</h2>
+        </div>
+    </body>
+</html>

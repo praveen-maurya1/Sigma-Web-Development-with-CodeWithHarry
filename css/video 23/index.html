@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="meta data about the page which browser shows when the client search the web">
+        <title>Css display Proprty</title>
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .box{
+                background-color: green;
+                color: white;
+                border: 2px solid red;
+                /* display inline box ko inline to krta hai pr padding aur margin top me nhi me nhi lgti */
+                display: inline;
+                padding: 45px;
+                margin: 45px;
+            }
+            .box2{
+                /* display inline box ko inline to krta hai pr padding aur margin top me nhi me nhi lgti
+                iske liye inline-block krna pdta hai */
+                display: inline;
+                background-color: aquamarine;
+                color: rgb(255, 2, 2);
+                border: 2px solid rgb(0, 0, 0);
+                padding: 45px;
+                margin: 45px;
+            }
+            .box1{
+                /* pura box gyb ho jayega with space */
+                /* display: none; */
+                /* pura box gyb ho jayega without space */
+                visibility: hidden;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="box">
+            I'm a Box 
+        </div>
+        <div class="box box1">
+            I'm a Box 1
+        </div>
+        <div class="box2">
+            I'm a Box 2
+        </div>
+        <span>I'm span</span>
+    </body>
+</html>
