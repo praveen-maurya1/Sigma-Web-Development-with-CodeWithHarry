@@ -1,0 +1,17 @@
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: rgba(255, 230, 0, 0.992);
+}
+.black{
+    color: black;
+}
+#firstdiv{
+    border: 5px solid green;
+    margin-bottom: 5px;
+}
+#seconddiv{
+    border: 5px solid blueviolet;
+    margin-bottom: 5px;
+}

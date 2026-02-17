@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description"
+            content="meta data about the page which browser shows when the client search the web">
+
+        <title>Forms</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Please Fill the Form</h1>
+        <form action="/">
+            <div>
+                <label for="username">Enter Your name : </label>
+                <input type="text" name="username" id="username"
+                    placeholder="Enter your text here">
+
+                <br>
+
+                <!-- required lga dene se input bhrna compulsry ho jata hai bina input ke form submit hi nahi hoga -->
+                <label for="emailid">Enter Your email : </label>
+                <input type="email" name="email" id="emailid"
+                    placeholder="Enter your email here" required>
+
+            </div>
+            <div>
+                <input type="radio" name="gender" id="male">
+                <label for="male">male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">female</label>
+            </div>
+            <div>
+                <input type="checkbox" name="subscrice" id="subscrice">
+                <label for="subscrice">Subscrice</label>
+            </div>
+            <div>
+                <label for="comment">Write Your Comment Here</label>
+                <br>
+                <textarea name="comment" id="comment" cols="30"
+                    rows="5"></textarea>
+            </div>
+            <div>
+                <select name="fruits" id="fruit">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="orange">Orange</option>
+                    <option value="pomigranet">Pomigranet</option>
+                </select>
+            </div>
+        </form>
+    </body>
+</html>
