@@ -1,0 +1,145 @@
+:root {
+    --navcol: rgb(248, 147, 147);
+    --textcol: rgb(0, 0, 0);
+    --hovcol: rgb(168, 168, 168);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--navcol);
+    color: var(--textcol);
+    width: 100vw;
+    position: fixed;
+}
+
+.nav2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--navcol);
+    color: var(--textcol);
+    width: 100vw;
+    position: sticky;
+}
+
+.nav ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    margin: 14px;
+    padding: 13px;
+}
+
+
+button {
+    background-color: var(--textcol);
+    color: var(--navcol);
+    width: 55px;
+    height: 33px;
+    margin: 20px 33px;
+    padding: 8px;
+    border: 1px solid var(--navcol);
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav button:hover {
+    background-color: rgb(86, 84, 84);
+    color: white;
+}
+
+.main {
+    width: 100vw;
+    height: 150vh;
+}
+
+.main2 {
+    display: flex;
+    width: 98vw;
+    height: 80vh;
+    background-color: rgb(4, 172, 74);
+    margin: 0px 9px;
+    margin-top: 85px;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.box {
+    height: 61vh;
+    width: 35vw;
+    border: 2px solid black;
+}
+
+.box1 {
+    background-color: pink;
+    margin: 73px;
+    margin-left: 222px;
+}
+
+.box2 {
+    background-color: rgb(46, 175, 239);
+    margin: 73px;
+    margin-right: 222px;
+}
+
+.botlogo {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 125px;
+    height: 121px;
+    border-radius: 74px;
+    overflow: hidden;
+}
+
+
+
+.maincontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    height: 20vh;
+    width: 80vw;
+    border: 2px solid black;
+    border-radius: 218px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h3 {
+    text-align: center;
+    width: 100%;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 50px;
+}
+
+.footer {
+    width: 100vw;
+    height: 10vw;
+    background-color: var(--navcol);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
