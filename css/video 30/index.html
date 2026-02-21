@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root {
+            /* variable me kuchh bhi store kiya ja skta hai */
+            --color: red;
+            --secolor: orange;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            display: flex;
+            background-color: var(--color);
+        }
+
+        ul li {
+            list-style: none;
+            padding: 3px;
+            margin: 3px;
+        }
+
+        .para {
+            --color: yellow;
+            background-color:var(--color);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+        <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+        <div class="para">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsam alias assumenda aperiam delectus quidem
+                quaerat corporis autem vitae tempore? Eligendi repellat quas porro perferendis nihil nobis ipsam
+                voluptates eaque reiciendis, eos dolorem dolorum aliquid at, tenetur veniam qui! Autem, error. Quae
+                facilis consequatur aliquam!</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+        body {
+            background-color: aquamarine;
+        }
+
+        .box {
+            background-color: white;
+            width: 410px;
+            height: 344px;
+            padding: 5px;
+            margin: 5px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        @media screen and (orientation: landscape) {
+            body {
+                border: 5px solid yellow;
+            }
+        }
+
+        @media only screen and (max-width:455px) {
+            body {
+                background-color: red;
+            }
+
+            .boxes {
+                flex-direction: column;
+            }
+        }
+
+        @media only screen and (min-width:455px) {
+            body {
+                background-color: blue;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+    </div>
+</body>
+
+</html>

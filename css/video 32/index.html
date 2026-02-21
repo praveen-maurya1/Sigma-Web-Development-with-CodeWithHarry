@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root {
+            --navcol: black;
+            --textcol: white;
+            --hovcol: rgb(168, 168, 168);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--navcol);
+            color: var(--textcol);
+            width: 100vw;
+        }
+
+        .nav ul {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            margin: 14px;
+            padding: 13px;
+        }
+
+
+        button {
+            background-color: var(--textcol);
+            color: var(--navcol);
+            width: 55px;
+            height: 33px;
+            margin: 20px 33px;
+            padding: 8px;
+            border: 1px solid var(--navcol);
+            border-radius: 5px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .nav button:hover {
+            background-color: rgb(86, 84, 84);
+            color: var(--textcol);
+        }
+
+        @media only screen and (max-width: 499px) {
+            :root {
+                --navcol: rgb(244, 140, 140);
+                --textcol: rgb(0, 0, 0);
+            }
+
+            .nav {
+                flex-direction: column;
+                width: 100vw;
+
+            }
+
+            ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact-Us</li>
+                <li>Gallery</li>
+            </ul>
+            <button>Admin</button>
+        </div>
+    </header>
+</body>
+
+</html>
