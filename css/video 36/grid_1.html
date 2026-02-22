@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            display: grid;
+            width: 80vw;
+            height: 100vh;
+            /* grid-template-columns: [pehla] 100px [dusra] 100px [teesra];
+            grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* grid-template-columns: repeat(3, minmax(100px, 1fr)); */
+            grid-template-columns: repeat(3, 80px);
+            grid-template-rows: repeat(3, 80px);
+            gap: 30px;
+            /* row-gap: 20px;
+            column-gap: 10px; */
+            /* niche wale ka use grid shell me adjust (center) krne ke liye hota hai */
+            /* justify-items: center;
+            align-items: center; */
+
+            /* jb container ki height aur width jyada ho aur grid ki bahut kam ho to ye use kiya jata hai*/
+            /* align-content: center;
+            justify-content: center; */
+            /* upar ki dono line ka kaam ek line krta hai */
+            place-content: center;
+        }
+
+        .items {
+            border: 2px solid red;
+            height: 50px;
+            width: 50px;
+        }
+
+        /* .item1 {
+            grid-row: 1/2;
+            or you can do
+            grid-row-start: 1;
+            grid-row-end: 2;
+            same thing
+            grid-column: 1/2;
+            grid-column: pehla/dusra;
+        } */
+
+        /* .item2 {
+            align-self: first baseline;
+            justify-self: flex-end;
+        }
+
+        .item4 {
+            grid-row: 1/2;
+            grid-column: 1/2;
+            color: green;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items item1">BOX 1</div>
+        <div class="items item2">BOX 2</div>
+        <div class="items">BOX 3</div>
+        <div class="items item4">BOX 4</div>
+        <div class="items">BOX 5</div>
+        <div class="items">BOX 6</div>
+    </div>
+</body>
+
+</html>
