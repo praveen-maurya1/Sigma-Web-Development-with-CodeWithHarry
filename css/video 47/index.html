@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            height: 80vh;
+            width: 80vw;
+            background: green;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* X movement */
+        .moveX {
+            position: absolute;
+            bottom: 0;
+            animation: moveX 4s linear infinite;
+        }
+
+        /* Y bounce */
+        .ball {
+            width: 60px;
+            height: 60px;
+            background: yellow;
+            border-radius: 50%;
+            border: 2px solid black;
+
+            animation: bounce 1s ease-out infinite alternate;
+        }
+
+        @keyframes moveX {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 70vw;
+            }
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-250px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="moveX">
+            <div class="ball"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

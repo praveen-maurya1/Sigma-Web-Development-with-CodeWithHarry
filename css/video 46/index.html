@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .container {
+            background-color: green;
+            width: 60vw;
+            height: 60vh;
+        }
+
+        .box {
+            background-color: rgb(239, 246, 20);
+            height: 5vh;
+            width: 5vw;
+            border: 2px solid black;
+            border-radius: 10px;
+
+            /* animation */
+            /* animation-name: praveenKaAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: 6;
+            animation-timing-function: cubic-bezier(0, 0.39, 0, 0.75);
+            animation-delay: 1s;
+            animation-direction: alternate-reverse; */
+            /* animation short  */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: praveenKaAnimation 3s linear 1s 3 alternate forwards,
+                praveen 3s linear 1s 3;
+        }
+
+        @keyframes praveenKaAnimation {
+            from {
+                background-color: aqua;
+            }
+
+            to {
+                /* transform: translateX(80vw) translateY(80vh); */
+                background-color: brown;
+            }
+        }
+
+        @keyframes praveen {
+            0% {
+                transform: rotate(100deg);
+            }
+
+            20% {
+                transform: rotate(150eg);
+            }
+
+            40% {
+                transform: rotate(200deg);
+            }
+
+            60% {
+                transform: rotate(260deg);
+            }
+
+            80% {
+                transform: rotate(300deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

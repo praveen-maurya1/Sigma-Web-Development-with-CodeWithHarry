@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition</title>
+    <style>
+        .container {
+            background-color: green;
+            width: 60vw;
+            height: 50vh;
+        }
+
+        .box {
+            background-color: red;
+            height: 5vh;
+            width: 5vw;
+            border: 2px solid black;
+            border-radius: 10px;
+            /* transition-property: transform; */
+            /* transition-property: all; */
+            /* transition-property: all ki jgh hum single single bhi de skte hain*/
+            /* transition-property: transform, background-color;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s; */
+
+            transition: all 3s cubic-bezier(0, 0.39, 0, 1.11) 1ms;
+
+        }
+
+        .translate {
+            /* scale box ka size double kr deta hai*/
+            transform: translateX(10vw) translateY(10vh) scale(2);
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+
+</html>
