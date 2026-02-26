@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: white;
 }
 
 body {
@@ -11,20 +10,24 @@ body {
 
 .main {
     background-image: url("assets/bg.jpg");
-    background-size: max(1200px, 100vw);
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
 .main .box {
     background-color: black;
-    height: 100vh;
+    min-height: 105vh;
     width: 100%;
     position: absolute;
     top: 0;
     opacity: .7;
+}
+
+nav {
+    max-height: 20vh;
 }
 
 .navbar {
@@ -171,6 +174,7 @@ body {
     background-color: rgb(25 23 23 / 69%);
     line-height: 1.5;
     padding: 0.7rem 7.6rem .6rem 1.5rem;
+    max-width: 14rem;
 }
 
 .curve {
@@ -216,8 +220,7 @@ body {
     width: 90%;
     max-width: 1276px;
     margin: auto;
-    /* margin-top: 5.5rem; */
-    height: 31vh;
+    height: auto;
     flex-wrap: wrap;
     margin-bottom: 5rem;
 }
@@ -230,41 +233,29 @@ body {
     height: 15.75rem;
     margin-top: 1rem;
     position: relative;
+    border-radius: 0.5rem;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .card1 {
     background-image: url("assets/movie1.jpg");
-    border-radius: 0.5rem;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 
 .card2 {
     background-image: url("assets/movie2.jpg");
-    border-radius: 0.5rem;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 
 .card3 {
     background-image: url("assets/movie3.jpg");
-    border-radius: 0.5rem;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 
 .card4 {
     background-image: url("assets/movie4.jpg");
-    border-radius: 0.5rem;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 
 .card5 {
     background-image: url("assets/movie5.jpg");
-    border-radius: 0.5rem;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 
 .card h1 {
@@ -307,6 +298,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .info-card {
@@ -314,7 +306,7 @@ body {
     justify-content: flex-start;
     /* align-items: center; */
     background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
-    width: 15.25rem;
+    width: 14.25rem;
     height: 13.75rem;
     color: white;
     border-radius: 1rem;
@@ -324,7 +316,6 @@ body {
     padding: 1.5rem;
     overflow: hidden;
     position: relative;
-    flex-wrap: wrap;
 }
 
 .info-card h3 {
@@ -352,6 +343,7 @@ body {
     margin: auto;
     top: 4rem;
     position: relative;
+    color: white;
 }
 
 .fques ul li {
@@ -382,15 +374,145 @@ body {
 
 }
 
-@media (max-width:1200px) {
-    .main {
-        height: 635px;
-    }
+.footer-form-container {
+    width: 82%;
+    max-width: 1276px;
+    margin: auto;
+    padding-top: 9rem;
+}
 
-    .main .box {
-        height: 635px;
-    }
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.footer-form-heading h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+}
+
+.footer-form-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-footer {
+    position: relative;
+    z-index: 11;
+    color: white;
+    border-radius: 6px;
+    font-weight: 500;
+    margin: 0.8em;
+    background-color: #e70f0f;
+    font-size: 21px;
+    /* padding: 13px 26px; */
+    padding: 0.7rem 1.6rem .7rem 1.5rem;
+    display: flex;
+}
+
+.btn-footer svg {
+    margin-left: 10px;
+}
+
+#footer-inp {
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1.06rem;
+    box-shadow: 0 0 0 0.5px white;
+    background-color: rgb(25 23 23 / 69%);
+    line-height: 1.5;
+    padding: 0.7rem 7.6rem .6rem 1.5rem;
+    max-width: 27rem;
+}
+
+.Q-call {
+    color: rgba(255, 255, 255, 0.7);
+    width: 82%;
+    max-width: 1276px;
+    margin: auto;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.Q-call a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer {
+    padding-bottom: 6rem;
+}
+
+.footer {
+    width: 82%;
+    max-width: 1276px;
+    margin: auto;
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-start;
+    padding: 1rem;
+    line-height: 1.5;
+    font-size: 0.875rem;
+    font-weight: 400;
+    flex-wrap: wrap;
+}
+
+.footer ul li {
+    list-style: none;
+    padding: .4rem;
+    padding-right: 11.7rem;
+}
+
+.color a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-btn {
+    width: 82%;
+    max-width: 1276px;
+    margin: auto;
+    padding-top: 3rem;
+}
+
+.footer-netflix-container {
+    width: 82%;
+    max-width: 1276px;
+    margin: auto;
+    padding-top: 2.7rem;
+}
+
+.footer-netflix p {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: unset;
+    font-size: 0.875rem;
+    font-weight: 400;
+    padding-top: 1rem;
+}
+
+.footer-p {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: unset;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    padding-top: 2.7rem;
+    padding-bottom: 2.7rem;
+    display: flex;
+
+}
+
+.footer-p a {
+    padding-left: .2rem;
+    color: rgb(68, 142, 244);
+}
+
+@media (max-width:1256px) {
     .navbar {
         padding: 23px 14px;
     }
@@ -401,7 +523,7 @@ body {
     }
 
     .hero {
-        height: 74vh;
+        min-height: 74vh;
     }
 
 
@@ -413,14 +535,6 @@ body {
 }
 
 @media (max-width:768px) {
-    .main {
-        height: 674px;
-    }
-
-    .main .box {
-        height: 674px;
-    }
-
     .navbar {
         padding: 23px 14px;
         justify-content: space-around;
@@ -432,7 +546,7 @@ body {
     }
 
     .hero {
-        height: 69vh;
+        min-height: 69vh;
     }
 
     .form-heading h3 {
@@ -443,14 +557,6 @@ body {
 }
 
 @media (max-width:480px) {
-    .main {
-        height: 674px;
-    }
-
-    .main .box {
-        height: 674px;
-    }
-
     .navbar {
         flex-direction: column;
         padding: 23px 0px;
@@ -471,7 +577,7 @@ body {
     }
 
     .hero {
-        height: 50vh;
+        min-height: 62vh;
     }
 
     .cards {
@@ -482,17 +588,21 @@ body {
     .curve h3 {
         margin-left: 7rem;
     }
+
+    #inp {
+        max-width: 7rem;
+    }
+
+    .curve-bottom {
+        margin-left: 4rem;
+    }
+
+    #footer-inp {
+        max-width: 15rem;
+    }
 }
 
 @media (max-width:389px) {
-    .main {
-        height: 676px;
-    }
-
-    .main .box {
-        height: 676px;
-    }
-
     .navbar {
         flex-direction: column;
         padding: 23px 0px;
@@ -510,5 +620,27 @@ body {
         font-size: 2rem;
         font-weight: 700;
         margin-bottom: 0.5rem;
+    }
+
+    .curve-bottom {
+        margin-left: 2rem;
+    }
+
+    #inp {
+        max-width: 7rem;
+    }
+
+    #footer-inp {
+        max-width: 7rem;
+    }
+}
+
+@media (max-width:250px) {
+    #inp {
+        max-width: 1rem;
+    }
+
+    #footer-inp {
+        max-width: 1rem;
     }
 }
