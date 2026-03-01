@@ -18,32 +18,47 @@ Hub
 
 
 function random_num1() {
-    while (true) {
-        let rand = Math.random() * 10;
-        let random = rand | 0;//convert float into integer
-        if (random <= 3 && random > 0) {
-            return random;
-        }
-    }
+    // while (true) {
+    //     let rand = Math.random() * 10;
+    //     let random = rand | 0;//convert float into integer
+    //     if (random <= 3 && random > 0) {
+    //         return random;
+    //     }
+    // }
+
+    // OPTIMIZED VERSION
+
+    return Math.floor(Math.random() * 3) + 1;
+
 }
-function random_num2() {
-    while (true) {
-        let rand = Math.random() * 10;
-        let random = rand | 0; //convert float into integer
-        if (random <= 3 && random > 0) {
-            return random;
-        }
-    }
-}
-function random_num3() {
-    while (true) {
-        let rand = Math.random() * 10;
-        let random = rand | 0;//convert float into integer
-        if (random <= 3 && random > 0) {
-            return random;
-        }
-    }
-}
+// function random_num2() {
+//     // while (true) {
+//     //     let rand = Math.random() * 10;
+//     //     let random = rand | 0; //convert float into integer
+//     //     if (random <= 3 && random > 0) {
+//     //         return random;
+//     //     }
+//     // }
+
+//     // OPTIMIZED VERSION
+
+//     return Math.floor(Math.random() * 3) + 1;
+// }
+
+
+// function random_num3() {
+//     // while (true) {
+//     //     let rand = Math.random() * 10;
+//     //     let random = rand | 0;//convert float into integer
+//     //     if (random <= 3 && random > 0) {
+//     //         return random;
+//     //     }
+//     // }
+
+//     // OPTIMIZED VERSION
+
+//     return Math.floor(Math.random() * 3) + 1;
+// }
 function bussiness_name_generator() {
 
     let ad = {
@@ -64,8 +79,8 @@ function bussiness_name_generator() {
         3: "Hub"
     };
     let random1 = random_num1();
-    let random2 = random_num2();
-    let random3 = random_num3();
+    let random2 = random_num1();
+    let random3 = random_num1();
 
     console.log(`Your Bussiness Name is : ${ad[random1]} ${sn[random2]} ${aw[random3]}`);
 }
