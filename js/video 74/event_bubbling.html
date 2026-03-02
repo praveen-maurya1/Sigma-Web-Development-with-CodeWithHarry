@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child {
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+
+        .childContainer {
+            background-color: beige;
+            padding: 14px;
+            margin: 14px;
+        }
+
+        section {
+            background-color: rgb(227, 28, 28);
+            padding: 16px;
+            margin: 16px;
+            border: 2px solid black;
+        }
+
+        .container {
+            background-color: rgb(227, 227, 28);
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="child-container">
+            <div class="child">
+                I am container
+            </div>
+        </section>
+        <script>
+            document.querySelector(".container").addEventListener("click", (e) => {
+                alert("clicked on container");
+            })
+            document.querySelector(".child-container").addEventListener("click", (e) => {
+                e.stopPropagation();//child pe click krne se parent pe click nhi hoga
+                alert("clicked on child-container");
+            })
+            document.querySelector(".child").addEventListener("click", (e) => {
+                e.stopPropagation();//child pe click krne se parent pe click nhi hoga
+                alert("clicked on child");
+            })
+
+            // let a = setInterval(() => {
+            //     document.querySelector(".child").innerHTML = Math.floor(1 + Math.random() * (100));
+            // }, 2000)//2 sec me ye function chlta rhega
+
+            // console.log(a);//ye browser console me ek number dega iska use krke clearInterval(given_num) krne  se Interval clear ho jata hai
+
+
+            let a = setTimeout(() => {
+                document.querySelector(".child").innerHTML = Math.floor(1 + Math.random() * (100));
+            }, 2000)//2 sec me ye function chlta rhega
+
+            console.log(a);//ye browser console me ek number dega iska use krke clearTimeout(given_num) krne  se Timeout clear ho jata hai
+
+        </script>
+    </div>
+</body>
+
+</html>
