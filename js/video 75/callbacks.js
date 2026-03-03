@@ -7,8 +7,8 @@ setTimeout(() => {
 
 console.log("I am the hacker")
 
-const callback = () => {
-    console.log("raju rastoogi");
+const callback = (name) => {
+    console.log(`raju rastoogi ka name ${name} hai aur ye callback function ke andar hai`);
 }
 
 const load_script = (src, callback) => {
@@ -17,4 +17,4 @@ const load_script = (src, callback) => {
     sc.onload = callback("ramesh");
     document.head.append(sc);
 }
-load_script("https://www.bing.com/search?q=sigma+web+development+by+code+with+harry&gs_lcrp=EgRlZGdlKgcIABBFGMIDMgcIABBFGMIDMgcIARBFGMIDMgcIAhBFGMIDMgsIAxDsBxiPARjqAjILCAQQ7AcYjwEY6gIyCwgFEOwHGI8BGOoCMgsIBhDsBxiPARjqAjILCAcQ7AcYjwEY6gLSAQ4xMjU5Mjg1NDc1ajBqMagCCLACAQ&FORM=ANSPA1&PC=SCOODB", callback);
+load_script("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js", callback);

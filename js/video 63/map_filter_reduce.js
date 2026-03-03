@@ -18,7 +18,7 @@ const greaterThanEight = (e)=>{
     return false;
 }
 
-console.log(arr.filter(greaterThanEight));//his is the use of filter
+console.log(arr.filter(greaterThanEight));//this is the use of filter
 
 
 let arr2=[1,2,5,6,3];

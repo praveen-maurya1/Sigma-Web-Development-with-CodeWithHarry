@@ -15,11 +15,11 @@
 // let data = getData();
 
 // data.then((v) => {
-// console.log(data);
+//     console.log(data);
 
-// console.log("process data");
+//     console.log("process data");
 
-// console.log("task 2");
+//     console.log("task 2");
 // })
 
 
@@ -32,11 +32,34 @@
 //         }, 2000);
 //     })
 // }
+// async function main() {
 
-async function getData() {
+//     console.log("Loading Modules");
+
+//     console.log("Do something else");
+
+//     console.log("Loading Data");
+
+//     let data = await getData();
+
+//     console.log(data);
+
+//     console.log("process data");
+
+//     console.log("task 2");
+// }
+// main();
+
+
+
+
+async function getData() {// ye function ek promise return krega 
+
     // simulate getting data from server
+
     // let x = fetch('https://jsonplaceholder.typicode.com/todos/1')
-    let x =await fetch('https://jsonplaceholder.typicode.com/posts', {
+     
+    let x = await fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: JSON.stringify({
             title: 'foo',
@@ -48,7 +71,7 @@ async function getData() {
         },
     })
 
-    let data = (await x).json();
+    let data = await x.json();
     return data;
 }
 async function main() {
