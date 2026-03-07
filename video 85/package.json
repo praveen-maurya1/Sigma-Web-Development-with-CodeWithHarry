@@ -1,0 +1,27 @@
+{
+  "name": "spotify_clone",
+  "version": "1.0.0",
+  "description": "This is spotify clone and after finish the project you can listen songs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveen-maurya1/Sigma-Web-Development-with-CodeWithHarry.git"
+  },
+  "keywords": [
+    "spotify",
+    "music"
+  ],
+  "author": "Praveen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praveen-maurya1/Sigma-Web-Development-with-CodeWithHarry/issues"
+  },
+  "homepage": "https://github.com/praveen-maurya1/Sigma-Web-Development-with-CodeWithHarry#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "slugify": "^1.6.6"
+  }
+}
