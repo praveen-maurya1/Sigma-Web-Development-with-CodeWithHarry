@@ -8,82 +8,95 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="icon" type="image/x-icon" href="svg/favicon.ico">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="navbar">
-                <div class="logo">
-                    <img src="svg/logo.svg" alt="logo">
-                </div>
-                <div class="home-search-bar">
-                    <div class="home">
-                        <img src="svg/home.svg" alt="home">
-                    </div>
-                    <div class="search-bar">
-                        <div class="search">
-                            <img src="svg/search.svg" alt="search">
+    <div class="container">
+        <header class="header">
+            <nav>
+                <div class="navbar flex-space-between">
+                    <div class="navbar-left flex-center">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="svg/logo.svg" width="50" alt="logo">
+                            </a>
                         </div>
-                        <div class="inp">
-                            <input type="text" placeholder="What do you want to play?">
+                        <div class="home-search-bar flex-center">
+                            <div class="home">
+                                <a href="#" class="flex-center p-1 border-circule">
+                                    <img src="svg/home.svg" width="50" alt="home">
+                                </a>
+                            </div>
+                            <form action="#" class="search-bar flex-center border-circule">
+                                <div class="input">
+                                    <a href="#" class="search-logo p-1 border-circule">
+                                        <img src="svg/search.svg" width="50" alt="search">
+                                    </a>
+                                    <input class="border-circule" id="search" type="text"
+                                        placeholder="What do you want to play?">
+                                    <a href="#" class="flex-center browse">
+                                        <img src="svg/browse.svg" width="50" alt="browse">
+                                    </a>
+                                </div>
+                            </form>
                         </div>
-                        <div class="browse">
-                            <img src="svg/browse.svg" alt="browse">
+                    </div>
+                    <div class="navbar-right flex-center">
+                        <div class="items">
+                            <ul class="flex-center">
+                                <li>
+                                    <a href="#">Premium</a>
+                                </li>
+                                <li>
+                                    <a href="#">Support</a>
+                                </li>
+                                <li>
+                                    <a href="#">Download</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pipe">
+
+                        </div>
+                        <div class="install-app">
+                            <a href="#" class="flex-center"><img src="svg/install.svg" width="50" alt="install">Install
+                                App</a>
+                        </div>
+                        <div class="nav-buttons flex-center">
+                            <div class="signup">
+                                <a href="#">Sign up</a>
+                            </div>
+                            <div class="login">
+                                <a href="#" >Log in</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="items">
-                    <ul>
-                        <li>
-                            <a href="#">Premium</a>
-                        </li>
-                        <li>
-                            <a href="#">Support</a>
-                        </li>
-                        <li>
-                            <a href="#">Download</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="pipe">
-                    |
-                </div>
-                <div class="install-app">
-                    <a href="#"><img src="svg/install.svg" alt="install">Install App</a>
-                </div>
-                <div class="nav-buttons">
-                    <div class="signup">
-                        <a href="#">Sign up</a>
-                    </div>
-                    <div class="login">
-                        <a href="#">Log in</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
+            </nav>
+        </header>
+
         <section>
-            <div class="left-container">
-                <div class="left-header">
+            <div class="sidebar">
+                <div class="sidebar-header flex-space-between">
                     <h3>Your Library</h3>
-                    <button class="btn"><img src="svg/create.svg" alt="create">Create</button>
+                    <button class="btn"><img src="svg/create.svg" width="50" alt="create">Create</button>
                 </div>
-                <div class="left-main">
-                    <div class="left-main-card">
+                <div class="sidebar-main">
+                    <div class="sidebar-main-card">
                         <h3>Create your first playlist</h3>
                         <p>It's easy, we'll help you</p>
-                        <button class="left-main-playlist-button">Create playlist</button>
+                        <button class="sidebar-main-playlist-button">Create playlist</button>
                     </div>
-                    <div class="left-main-card">
+                    <div class="sidebar-main-card">
                         <h3>Let's find some podcasts to follow</h3>
                         <p>We'll keep you updated on new episodes</p>
-                        <button class="left-main-playlist-button">Browse podcasts</button>
+                        <button class="sidebar-main-playlist-button">Browse podcasts</button>
                     </div>
                 </div>
-                <div class="left-footer">
-                    <div class="left-footer-content">
+                <div class="sidebar-footer">
+                    <div class="sidebar-footer-content">
                         <ul>
                             <li>
                                 <a href="#">Legal</a>
@@ -106,19 +119,21 @@
                         </ul>
                         <a href="#">Cookies</a>
                     </div>
-                    <button class="btn"><img src="svg/world.svg" alt="world">English</button>
+                    <button class="btn"><img src="svg/world.svg" width="50" alt="world">English</button>
                 </div>
             </div>
         </section>
-        <section>
-            <div class="right-container">
-                <div class="right-header">
-                    <h1>Trending Songs</h1>
-                    <a href="#">Show all</a>
+        <main>
+            <section>
+                <div class="main">
+                    <div class="main-content-header">
+                        <h1>Trending Songs</h1>
+                        <a href="#">Show all</a>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 

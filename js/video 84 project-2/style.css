@@ -5,4 +5,173 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    /* font-size: 1rem; */
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 425px 1fr;
+    grid-template-rows: 65px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    height: 100vh;
+    /* gap: 8px; */
+}
+
+.header {
+    grid-area: header;
+    place-content: center;
+    /* position: fixed; */
+    background-color: black;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #121212;
+    border-radius: 8px;
+}
+
+.main {
+    grid-area: main;
+    background-color: #212121;
+    margin-left: 8px;
+    border-radius: 8px;
+}
+
+.navbar {
+    padding: 0rem .8rem;
+}
+
+.navbar-left {
+    padding: 0rem 1rem;
+}
+
+.navbar-left img {
+    width: 1.5rem;
+}
+
+.logo img {
+    width: 2rem;
+    padding-right: 1rem;
+}
+
+.home {
+    padding-left: 10px;
+}
+
+.home a {
+    background-color: #1f1f1f;
+}
+
+.input {
+    position: relative;
+}
+
+.search-logo {
+    position: absolute;
+    left: .4rem;
+    top: 0px;
+    z-index: 1;
+}
+
+#search {
+    background-color: #1f1f1f;
+    border: none;
+    color: #b3b3b3;
+    height: 1.8rem;
+    padding: .6rem .8rem;
+    margin-left: 8px;
+    width: 26rem;
+    position: relative;
+    cursor: text;
+    font-size: .9rem;
+    font-weight: 500;
+    padding-left: 3rem;
+}
+
+#search::placeholder {
+    color: #b3b3b3;
+}
+
+.browse {
+    position: absolute;
+    right: 1rem;
+    z-index: 1;
+    top: .8rem;
+    border-left: .1px solid #b3b3b39c;
+    padding-left: .8rem;
+}
+
+.sidebar img {
+    width: 2rem;
+}
+
+
+.items li {
+    list-style: none;
+    color: #b3b3b3;
+}
+
+.items li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.navbar-right {
+    gap: 1.3rem;
+    letter-spacing: -1px;
+}
+
+.items ul {
+    gap: .5rem;
+}
+
+.pipe {
+    width: 1px;
+    height: 1.7rem;
+    background-color: white;
+    margin-right: .7rem;
+}
+
+.install-app img {
+    width: 1rem;
+}
+
+.install-app a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: .875rem;
+    font-weight: 600;
+    gap: .3rem;
+}
+
+.signup a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: .875rem;
+    font-weight: 600;
+}
+
+.nav-buttons {
+    gap: .6rem;
+}
+
+.login a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: white;
+    padding: .9rem 1.8rem;
+    border-radius: 1.5rem;
+}
+
+.btn {
+    background-color: #1f1f1f;
+    color: white;
 }
