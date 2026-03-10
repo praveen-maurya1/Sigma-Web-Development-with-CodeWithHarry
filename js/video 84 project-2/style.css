@@ -151,7 +151,7 @@ body {
 
 .navbar-right {
     gap: 1.3rem;
-    letter-spacing: -1px;
+    letter-spacing: -.5px;
 }
 
 .items ul {
@@ -366,6 +366,7 @@ body {
     text-align: start;
     border-radius: 0.5rem;
     color: white;
+    cursor: pointer;
 }
 
 .card img {
@@ -381,15 +382,22 @@ body {
 .card-content a {
     text-decoration: none;
     color: white;
-    font-size: .875rem;
+    font-size: .92rem;
     font-weight: 500;
     padding: 8px 0px;
-    letter-spacing: -0.5px;
+    /* letter-spacing: -0.5px; */
+    line-height: 1.3rem;
+    /* overflow: hidden; */
+    /* height: 2.2rem; */
+}
+.card-content span{
+    height: 2.6rem;
+    overflow: hidden;
 }
 
 .card-content span a {
     color: #b3b3b3;
-    font-size: .86rem;
+    font-size: .78rem;
 }
 
 .card-content span {
@@ -407,6 +415,10 @@ body {
     color: #b3b3b3;
     font-size: .86rem;
     font-weight: 500;
+}
+
+.svg img {
+    height: auto;
 }
 
 @media (max-width:1200px) {
