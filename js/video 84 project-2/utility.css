@@ -18,6 +18,14 @@
     /* flex-wrap: wrap; */
 }
 
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 1rem;
+}
+
 .invert {
     filter: invert();
 }
