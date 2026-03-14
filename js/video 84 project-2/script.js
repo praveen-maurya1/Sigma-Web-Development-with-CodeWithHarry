@@ -1,4 +1,4 @@
-console.log("hllo ji")
+
 let currentSong = new Audio;
 let currentIndex = 0;
 currentSong.volume = .3;
@@ -24,11 +24,9 @@ function formatTime(seconds) {
 async function getSongs() {
     let a = await fetch("http://127.0.0.1:5500/assets/songs/")
     let response = await a.text();
-    // console.log(response);
     let div = document.createElement("div");
     div.innerHTML = response;
     let as = div.getElementsByTagName("a");
-    console.log(as)
     let songs = []
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
@@ -36,7 +34,6 @@ async function getSongs() {
             songs.push(element.href.split("/songs/")[1])
         }
     }
-    console.log(songs)
     return songs;
 }
 const songByIndex = (songs, index) => {
@@ -45,8 +42,7 @@ const songByIndex = (songs, index) => {
     currentSong.play();
     seekbarSong.innerHTML = `<a href="#">${song}</a>`
 
-    document.querySelector(".playing-song-name").innerHTML = `<a href="#">${song}</a>`
-    // console.log(currentSong)
+    document.querySelector(".playing-song-name").innerHTML = `<a href="#">${song}</a>`;
 }
 function nextSong(songs) {
     currentIndex++;
@@ -84,11 +80,8 @@ const playMusic = (track, pause = false) => {
         currentSong.play()
         document.querySelector("#play img").src = "svg/pause.svg"
     }
-    // console.log(currentSong.src)
     let song = track.replaceAll("%20", " ");
-    seekbarSong.innerHTML = `<a href="#">${song}</a>`
-    // console.log(seekbarSong)
-
+    seekbarSong.innerHTML = `<a href="#">${song}</a>`;
     document.querySelector(".playing-song-name").innerHTML = `<a href="#">${song}</a>`
 }
 
@@ -137,12 +130,10 @@ async function main() {
 
     Array.from(document.querySelector(".song-list-card-container").getElementsByClassName("song-list-card")).forEach(e => {
         e.addEventListener("click", element => {
-            let song_name = e.querySelector(".song-name").dataset.song
-            // console.log(song_name)
+            let song_name = e.querySelector(".song-name").dataset.song;
             playMusic(song_name)
         })
     })
-    //listen for timeupdate event
     currentSong.addEventListener("timeupdate", () => {
         document.querySelector(".current-time").innerHTML = formatTime(currentSong.currentTime)
         document.querySelector(".circule").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%"
@@ -178,7 +169,6 @@ async function main() {
     volume_seekbar.addEventListener("click", (e) => {
         let rect = volume_seekbar.getBoundingClientRect();
         let percent = (e.clientX - rect.left) / rect.width;
-        console.log(percent)
         document.querySelector(".volume-circule").style.left = percent * 100 + "%";
         document.querySelector(".volume-seekbar-fill").style.width = percent * 100 + "%";
         currentSong.volume = percent;
@@ -196,6 +186,12 @@ async function main() {
     volumeButton.addEventListener("click", () => {
         toggleMuted();
     })
+    let sidebar = document.querySelector(".sidebar");
+    let container = document.querySelector(".container");
+    hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        container.classList.toggle("active");
+    })
 
 }
-main()  
+main()

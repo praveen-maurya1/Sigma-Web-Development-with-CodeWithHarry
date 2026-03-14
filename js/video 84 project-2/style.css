@@ -58,7 +58,10 @@ body {
     display: flex;
     flex-direction: column;
     /* height: 90vh; */
-    height: calc(90vh - 65px);
+    height: calc(91vh - 65px);
+    position: absolute;
+    z-index: 1;
+    top: 6px;
 }
 
 main {
@@ -74,6 +77,7 @@ main {
     height: calc(91vh - 65px);
     overflow-y: scroll;
     scroll-behavior: smooth;
+    position: relative;
 }
 
 .top-color {
@@ -95,10 +99,14 @@ main {
 .navbar {
     padding-left: .8rem;
     padding-right: .3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-left {
     padding: 0rem 1rem;
+
 }
 
 .navbar-left img {
@@ -220,6 +228,7 @@ main {
 
 .sidebar-header {
     padding: 1rem;
+
 }
 
 .btn {
@@ -248,17 +257,16 @@ main {
     letter-spacing: -1px;
 }
 
-.sidebar-header .flex-center img {
-    width: 34px;
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    transform: translateX(-170%);
-    transition: transform 0.3s cubic-bezier(0, 1.33, 0.62, 0.99);
+.sidebar-hamburger {
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    display: none;
 }
 
-.sidebar:hover #hamburger {
-    transform: translateX(3%);
+.sidebar-hamburger img {
+    width: 50px;
+    cursor: pointer;
 }
 
 .sidebar-main {
@@ -461,11 +469,15 @@ main {
     bottom: 0;
     width: 100%;
     background-color: black;
+    z-index: 2;
 }
 
 .playbar-container {
     width: 96%;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .song-img {
@@ -479,10 +491,16 @@ main {
 }
 
 .name {
-    width: 216px;
+    width: 13.5rem;
     height: 51px;
     align-items: center;
     display: flex;
+}
+
+.song-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .song-name .name a {
@@ -652,6 +670,8 @@ main {
     align-items: flex-end;
     gap: 1rem;
     background: linear-gradient(to bottom, #9e0202, #1d1d1d);
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .hero-song-img {
@@ -690,18 +710,133 @@ main {
     font-size: 3rem;
     font-weight: bolder;
     height: 8rem;
-    width: 97%;
+    width: 49vw;
     overflow: hidden;
+    text-wrap: wrap;
 }
 
-@media (max-width:1235px) {
+@media (max-width:1255px) {
     #search {
         width: 14rem;
     }
 }
 
-@media (max-width:1044px) {
+@media (max-width:1055px) {
     .items {
         display: none;
     }
+
+    .container {
+        grid-template-columns: 0px 1fr;
+    }
+
+    .sidebar-hamburger {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-106%);
+        transition: transform 0.35s ease;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        width: 433px;
+    }
+
+    .main {
+        transform: translateX(0px);
+        transition: transform 0.35s ease;
+    }
+
+}
+
+@media (max-width:794px) {
+    .playbar-container .song-name {
+        display: none;
+    }
+
+    .playbar-container {
+        justify-content: center;
+    }
+
+    .sidebar.active {
+        width: 350px;
+    }
+
+    .container {
+        grid-template-columns: 0px 1fr;
+        grid-template-rows: 173px 1fr;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .playing-song-name {
+        width: 88vw;
+        height: 17rem;
+    }
+
+
+    .navbar {
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 21px;
+    }
+
+    .navbar-left {
+        padding-bottom: 28px;
+    }
+
+    .navbar-right {
+        padding-bottom: 28px;
+    }
+
+    .playbar-container {
+        height: 18vh;
+    }
+
+    .home {
+        padding-left: 8px;
+    }
+
+    .logo img {
+        padding-right: 0rem;
+    }
+
+    .main {
+        margin: 0 -8px 0px 3px;
+    }
+
+    .pipe {
+        display: none;
+    }
+}
+
+@media (max-width:431px) {
+    .playing-song-name {
+        height: 16rem;
+    }
+
+    .sidebar.active {
+        width: 280px;
+    }
+
+}
+
+@media (max-width:400px) {
+    .sidebar.active {
+        width: 250px;
+    }
+}
+
+@media (max-width:380px) {
+    .playing-song-name {
+        height: 8rem;
+        font-size: 2rem;
+    }
+
 }
