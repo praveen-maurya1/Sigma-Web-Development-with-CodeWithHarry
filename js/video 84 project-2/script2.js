@@ -1,11 +1,4 @@
-let params = new URLSearchParams(window.location.search)
-let folder = params.get("folder")
 
-
-
-
-
-let currentFolder;
 let currentSong = new Audio;
 let currentIndex = 0;
 currentSong.volume = .3;
@@ -28,9 +21,8 @@ function formatTime(seconds) {
 }
 
 
-async function getSongs(folder) {
-    currentFolder = folder;
-    let a = await fetch(`http://127.0.0.1:5500/${folder}`)
+async function getSongs() {
+    let a = await fetch("http://127.0.0.1:5500/assets/songs/")
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -39,18 +31,18 @@ async function getSongs(folder) {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".m4a")) {
-            songs.push(element.href.split(`${folder}`)[1])
+            songs.push(element.href.split("/songs/")[1])
         }
     }
     return songs;
 }
 const songByIndex = (songs, index) => {
-    let song = decodeURI(songs[index]);
-    currentSong.src = `${currentFolder}` + song;
+    let song = songs[index].replaceAll("%20", " ");
+    currentSong.src = "/assets/songs/" + song;
     currentSong.play();
-    seekbarSong.innerHTML = `<a href="#">${song.replace("/", "")}</a>`
+    seekbarSong.innerHTML = `<a href="#">${song}</a>`
 
-    document.querySelector(".playing-song-name").innerHTML = `<a href="#">${song.replace("/", "")}</a>`;
+    document.querySelector(".playing-song-name").innerHTML = `<a href="#">${song}</a>`;
 }
 function nextSong(songs) {
     currentIndex++;
@@ -82,22 +74,21 @@ function toggleMuted() {
 
 }
 
-const playMusic = (track, pause = true) => {
-    currentSong.src = `/${currentFolder}/` + track
+const playMusic = (track, pause = false) => {
+    currentSong.src = "/assets/songs/" + track
     if (!pause) {
         currentSong.play()
         document.querySelector("#play img").src = "svg/pause.svg"
     }
-    let song = decodeURI(track).replace("/", "");
+    let song = track.replaceAll("%20", " ");
     seekbarSong.innerHTML = `<a href="#">${song}</a>`;
     document.querySelector(".playing-song-name").innerHTML = `<a href="#">${song}</a>`
 }
 
 async function main() {
-    // let songs = await getSongs("assets/english_songs")
-    let songs = await getSongs(`assets/${folder}`)
-    playMusic(songs[0], false)
-    // songByIndex(songs, 0)
+    let songs = await getSongs()
+    playMusic(songs[0], true)
+
     let songAdd = document.querySelector(".song-list-card-container")
     for (const song of songs) {
         songAdd.innerHTML += ` <div class="song-list-card flex-space-between">
@@ -106,7 +97,7 @@ async function main() {
                                     <img src="assets/songs_img/aura.jpg" alt="">
                                 </div>
                                 <div class="song-name playlist-song-name" data-song="${song}">
-                                ${decodeURI(song).replace("/", "")}
+                                ${decodeURI(song)}
                                 </div>
                             </div>
                             <div class="song-duration">
@@ -123,7 +114,7 @@ async function main() {
 
         const song = songs[i];
 
-        const audio = new Audio(`${currentFolder}/` + song);
+        const audio = new Audio("/assets/songs/" + song);
         audio.preload = "metadata";
 
         const durationEl = card.querySelector(".song-duration");
