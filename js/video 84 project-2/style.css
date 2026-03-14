@@ -578,10 +578,36 @@ main {
     height: 3px;
     width: 7vw;
     background-color: rgba(129, 129, 129, 0.936);
+    cursor: pointer;
+    position: relative;
+}
+
+.volume-seekbar-fill {
+    background-color: white;
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.volume-circule {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    left: 0%;
+    position: relative;
+    bottom: 5px;
+    transition: left 0.1s;
+    cursor: pointer;
 }
 
 .volume-button-container {
     gap: 11px;
+}
+
+.volume-button {
+    cursor: pointer;
 }
 
 .song-list-card {
@@ -642,6 +668,7 @@ main {
     flex-direction: column;
     justify-content: center;
     /* gap: 9px; */
+    max-width: 51rem;
 }
 
 .hero-content span {
@@ -660,8 +687,11 @@ main {
 }
 
 .playing-song-name {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bolder;
+    height: 8rem;
+    width: 97%;
+    overflow: hidden;
 }
 
 @media (max-width:1235px) {
