@@ -30,7 +30,7 @@ function formatTime(seconds) {
 
 async function getSongs(folder) {
     currentFolder = folder;
-    let a = await fetch(`http://127.0.0.1:5500/${folder}`)
+    let a = await fetch(`http://127.0.0.1:5500/js/video 84 project-2/${folder}`)
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -82,8 +82,9 @@ function toggleMuted() {
 
 }
 
-const playMusic = (track, pause = true) => {
-    currentSong.src = `/${currentFolder}/` + track
+const playMusic = (track, pause = false) => {
+
+    currentSong.src = `/js/video 84 project-2//${currentFolder}/` + track
     if (!pause) {
         currentSong.play()
         document.querySelector("#play img").src = "svg/pause.svg"
@@ -94,10 +95,8 @@ const playMusic = (track, pause = true) => {
 }
 
 async function main() {
-    // let songs = await getSongs("assets/english_songs")
     let songs = await getSongs(`assets/${folder}`)
-    playMusic(songs[0], false)
-    // songByIndex(songs, 0)
+    playMusic(songs[0], true)
     let songAdd = document.querySelector(".song-list-card-container")
     for (const song of songs) {
         songAdd.innerHTML += ` <div class="song-list-card flex-space-between">
@@ -113,8 +112,6 @@ async function main() {
                                 00
                             </div>
                         </div>`;
-
-
     }
 
     const cards = document.querySelectorAll(".song-list-card");
