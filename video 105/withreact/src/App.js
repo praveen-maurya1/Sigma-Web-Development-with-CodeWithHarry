@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 function App() {
+  //this is the usestate hook it is used for change value of a variable without using dom manipulation
   const [value, setValue] = useState(0)
   return (
     <div className="App">
