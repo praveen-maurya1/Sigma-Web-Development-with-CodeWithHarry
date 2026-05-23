@@ -6,10 +6,10 @@ function App() {
     <>
       <Navbar />
       <div className="cards">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card title="Snacks" desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam soluta"/>
+        <Card title="Chocolate" desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam soluta"/>
+        <Card title="Biscuit" desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam soluta"/>
+        <Card title="Drinks" desc="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam soluta"/>
       </div>
       <Footer />
     </>
