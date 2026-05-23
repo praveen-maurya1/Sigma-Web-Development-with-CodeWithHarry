@@ -1,0 +1,13 @@
+.card{
+    width: 20vw;
+    height: 10vh;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    overflow-y: hidden;
+    border-radius: 10px;
+}
+.card h3{
+    background-color: rgb(230, 194, 148);
+    border-radius: 10px;
+}
