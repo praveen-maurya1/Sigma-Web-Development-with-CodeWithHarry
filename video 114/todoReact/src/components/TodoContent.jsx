@@ -113,7 +113,7 @@ const TodoContent = () => {
                             return (showFinished || !item.isCompleted) && <div key={item.id} className='todos flex justify-around mb-2'>
                                 <div className='flex gap-3'>
                                     <input type="checkbox" onChange={handleCheckbox} name={item.id} checked={item.isCompleted} id="check" />
-                                    <div className='w-[330px] wrap-break-word'>
+                                    <div className='w-[330px] wrap-break-word bg-[#d5d8ea] p-3 rounded-xl'>
                                         <h3 className={item.isCompleted ? "line-through" : ""} >{item.todo} </h3>
                                     </div>
                                 </div>
