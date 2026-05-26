@@ -49,7 +49,7 @@ src/
 Clone the repository:
 
 ```bash
-git clone <your-repository-link>
+git clone https://github.com/praveen-maurya1/Sigma-Web-Development-with-CodeWithHarry/tree/main/video%20114
 ```
 
 Go to the project folder:
@@ -58,11 +58,13 @@ Go to the project folder:
 cd itask
 ```
 
-Install dependencies:
+## Dependencies
 
-```bash
-npm install
-```
+* react
+* react-dom
+* react-icons
+* uuid
+
 
 Run the development server:
 
@@ -72,11 +74,6 @@ npm run dev
 
 ## Future Improvements
 
-* Dark mode
-* Due dates
-* Drag and drop tasks
-* Categories / Tags
-* Backend integration
 * Authentication
 
 ## Author
