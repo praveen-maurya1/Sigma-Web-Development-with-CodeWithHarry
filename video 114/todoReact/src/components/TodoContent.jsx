@@ -113,11 +113,11 @@ const TodoContent = () => {
                             return (showFinished || !item.isCompleted) && <div key={item.id} className='todos flex justify-around mb-2'>
                                 <div className='flex gap-3'>
                                     <input type="checkbox" onChange={handleCheckbox} name={item.id} checked={item.isCompleted} id="check" />
-                                    <div className='w-[330px] wrap-break-word bg-[#d5d8ea] p-3 rounded-xl'>
+                                    <div className='w-[45vw] md:w-[75vw] lg:w-[20vw] wrap-break-word bg-[#d5d8ea] p-3 rounded-xl'>
                                         <h3 className={item.isCompleted ? "line-through" : ""} >{item.todo} </h3>
                                     </div>
                                 </div>
-                                <div className='flex gap-3 flex-wrap items-center'>
+                                <div className='flex gap-3 items-center'>
                                     <button onClick={(e) => handleEdit(e, item.id)} className='bg-violet-900 text-white rounded-md p-2'>
                                         <TiEdit />
                                     </button>
