@@ -19,7 +19,7 @@ function App() {
   }
 
   const onSubmit = async (data) => {
-    // await delay(2);//simulate network delay
+    await delay(2);//simulate network delay
     const response = await fetch('http://localhost:3000/', {
       method: "POST", headers: {
         "Content-Type": "application/json"
@@ -28,7 +28,7 @@ function App() {
     //npm i cors
     const content = await response.text();
     console.log(data, content)
-    
+
     // if (data.username !== "rohan") {
     //   setError("InvalidCredentails", { message: "Invalid credentials" })
     // }
@@ -49,7 +49,7 @@ function App() {
             <h1>Submitting....</h1>
           </div>}
           {errors.InvalidCredentails && <span className=' w-[23%] text-white mx-auto'>{errors.InvalidCredentails.message}</span>}
-          <input disabled={isSubmitting} className={isSubmitting ? "border cursor-pointer border-black w-[30%] p-3 mx-auto my-3 rounded-xl bg-violet-900 text-slate-400" : 'border cursor-pointer border-black w-[30%] p-3 mx-auto my-3 rounded-xl bg-violet-950 text-white'} type="submit" value='Submit' />
+          <input disabled={isSubmitting} className={isSubmitting ? "border cursor-pointer border-black w-[55%] lg:w-[30%] p-3 mx-auto my-3 rounded-xl bg-violet-900 text-slate-400" : 'border cursor-pointer border-black w-[55%] lg:w-[30%]  p-3 mx-auto my-3 rounded-xl bg-violet-950 text-white'} type="submit" value='Submit' />
         </form>
       </div>
     </>
