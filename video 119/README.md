@@ -154,11 +154,8 @@ Through this project, I learned:
 
 ### Form UI
 
-Add your screenshots in a `screenshots` folder and use:
 
-```md
 ![Project Screenshot](./screenshot/rhf.png)
-```
 
 ---
 
